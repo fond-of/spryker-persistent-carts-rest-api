@@ -2,6 +2,7 @@
 
 namespace FondOfSpryker\Client\PersistentCartsRestApi\Dependency\Client;
 
+use Spryker\Client\ZedRequest\ZedRequestClientInterface;
 use Spryker\Shared\Kernel\Transfer\TransferInterface;
 
 class PersistentCartsRestApiToZedRequestClientBridge implements PersistentCartsRestApiToZedRequestClientInterface
@@ -14,7 +15,7 @@ class PersistentCartsRestApiToZedRequestClientBridge implements PersistentCartsR
     /**
      * @param \Spryker\Client\ZedRequest\ZedRequestClientInterface $zedRequestClient
      */
-    public function __construct($zedRequestClient)
+    public function __construct(ZedRequestClientInterface $zedRequestClient)
     {
         $this->zedRequestClient = $zedRequestClient;
     }

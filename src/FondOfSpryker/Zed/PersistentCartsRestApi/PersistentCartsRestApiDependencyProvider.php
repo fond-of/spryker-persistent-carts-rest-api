@@ -31,7 +31,7 @@ class PersistentCartsRestApiDependencyProvider extends AbstractBundleDependencyP
      */
     protected function addQuoteFacade(Container $container): Container
     {
-        $container[static::FACADE_QUOTE] = function (Container $container) {
+        $container[static::FACADE_QUOTE] = static function (Container $container) {
             return new PersistentCartsRestApiToQuoteFacadeBridge(
                 $container->getLocator()->quote()->facade()
             );
