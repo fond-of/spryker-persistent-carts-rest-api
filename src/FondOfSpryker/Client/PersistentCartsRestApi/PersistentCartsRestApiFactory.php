@@ -18,8 +18,6 @@ class PersistentCartsRestApiFactory extends AbstractFactory
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Client\PersistentCartsRestApi\Dependency\Client\PersistentCartsRestApiToZedRequestClientInterface
      */
     protected function getZedRequestClient(): PersistentCartsRestApiToZedRequestClientInterface
